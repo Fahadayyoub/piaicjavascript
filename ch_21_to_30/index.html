@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      var input = prompt("enter a number number with decimal point");
+      var text = "yesterday match was too good";
+      var result = text.slice(0, Math.ceil(input));
+      var resultLength = result.length - 1;
+      var newResult = "";
+      for (i = resultLength; i >= 0; i--) {
+        newResult = newResult + result.charAt(i);
+      }
+      alert(newResult);
+    </script>
+    <title>PIAIC75416</title>
+  </head>
+  <body></body>
+</html>

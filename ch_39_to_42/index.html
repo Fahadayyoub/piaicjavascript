@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      var courses = ["English ", "Urdu ", "Math ", "Science ", "Computer "];
+      var total = 0;
+      var grade = "A+";
+      var totalmarks = 500;
+      for (i = 0; i < 5; i++) {
+        var input = prompt("Enter a marks of " + courses[i]);
+        if (input < 100) {
+          total = +input + total;
+        } else {
+          total = 100 + total;
+        }
+      }
+      console.log(total);
+      var percentage = (total / totalmarks) * 100;
+      switch (true) {
+        case percentage >= 90:
+          alert("Your percentage is " + percentage + "\nYour grade is A+");
+          break;
+        case percentage >= 75:
+          alert("Your percentage is " + percentage + "\nYour grade is A");
+
+          break;
+        case percentage >= 60:
+          alert("Your percentage is " + percentage + "\nYour grade is B");
+          break;
+        case percentage >= 45:
+          alert("Your percentage is " + percentage + "\nYour grade is C");
+          break;
+        case percentage >= 30:
+          alert("Your percentage is " + percentage + "\nYour grade is D");
+          break;
+        default:
+          alert("Your percentage is " + percentage + "\nYour grade is F");
+      }
+    </script>
+    <title>PIAIC75416</title>
+  </head>
+  <body></body>
+</html>

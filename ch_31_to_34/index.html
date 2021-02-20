@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      var name = prompt("Enter your mame");
+      var date = prompt("Enter your date of birth (date)");
+      var month = prompt("Enter your date of birth (month)");
+      month--;
+      var year = prompt("Enter your date of birth (year)");
+      console.log(
+        "Hello " + name + ", Good Morning, AfterNoon, Evening or Night"
+      );
+      let birthday = new Date(year, month, date);
+      let today = new Date();
+      console.log("Your DOB is " + birthday);
+      var difference = (today.getTime() - birthday.getTime()) / 1000;
+      let years = Math.floor(difference / 60 / 60 / 24 / 360);
+      let days = Math.floor(difference / 60 / 60 / 24);
+      let displaymonth = Math.floor(difference / 60 / 60 / 24 / 30);
+      let hours = Math.floor(difference / 60 / 60);
+      let minutes = Math.floor(difference / 60);
+      console.log("Your date of birthday is " + birthday);
+      console.log("Your age in years " + years);
+      console.log("Your age in months " + displaymonth);
+      console.log("Your age in days " + days);
+      console.log("Your age in hours " + hours);
+      console.log("Your age in minutes " + minutes);
+      console.log("Your age in seconds " + Math.floor(difference));
+      if (
+        birthday.getDate() == today.getDate() &&
+        birthday.getMonth() + 1 == today.getMonth() + 1
+      ) {
+        console.log("Happy birthday");
+      }
+    </script>
+    <title>PIAIC75416</title>
+  </head>
+  <body></body>
+</html>

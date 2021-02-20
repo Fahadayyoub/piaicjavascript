@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      var firstNumber = prompt("Enter your first number");
+      var secondNumber = prompt("Enter your second number");
+      var sign = prompt("Enter your sign i.e + - * %");
+      var answer = "Some thing is worng";
+      switch (sign) {
+        case "+":
+          answer = firstNumber + secondNumber;
+          break;
+        case "-":
+          answer = firstNumber - secondNumber;
+          break;
+        case "*":
+          answer = firstNumber * secondNumber;
+          break;
+        case "%":
+          answer = firstNumber / secondNumber;
+          break;
+        default:
+          alert("Enter correct sign");
+      }
+      if (answer == "Some thing is worng") {
+        alert(answer);
+      } else {
+        alert("your answer is " + answer);
+      }
+    </script>
+    <title>PIAIC75416</title>
+  </head>
+  <body></body>
+</html>

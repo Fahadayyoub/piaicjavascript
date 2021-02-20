@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      var courses = [];
+      var input = prompt("course 1", "computer");
+      courses.push(input);
+      var input = prompt("course 2", "Java");
+      courses.push(input);
+      var input = prompt("course 3", "Html");
+      courses.push(input);
+      var input = prompt("course 4", "Javascript");
+      courses.push(input);
+      var input = prompt("course 5", "Python");
+      courses.push(input);
+      input = "edit";
+      while (input == "edit") {
+        var input = prompt(
+          "Write edit if you want to edit any course \n Write result if you want to print result"
+        );
+        if (input == "edit") {
+          var value = "";
+          for (i = 0; i < 5; i++) {
+            number = i + 1;
+            value = value + "\n" + number + " for " + courses[i];
+          }
+          var input = prompt("You have 5 courses write " + value);
+          if (input < 6 && input > 0) {
+            var change = prompt("new course");
+            courses.splice(input - 1, 1, change);
+            input = "edit";
+          } else if (input != "result") {
+            alert("You enter  wrong number");
+            input = "edit";
+          }
+        }
+      }
+      for (i = 0; i < 5; i++) {
+        number = i + 1;
+        value = value + "\n" + number + " for " + courses[i];
+      }
+      alert("Your selected courses are" + value);
+    </script>
+    <title>PIAIC75416</title>
+  </head>
+  <body></body>
+</html>
